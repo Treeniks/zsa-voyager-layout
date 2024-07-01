@@ -6,6 +6,8 @@ build:
 
 clean:
     cd qmk_firmware && make clean
+    rm voyager_main.bin
 
 distclean:
     cd qmk_firmware && make distclean
+    rm voyager_main.bin
