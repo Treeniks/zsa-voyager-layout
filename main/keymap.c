@@ -111,27 +111,6 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo5, TG(4)),
 };
 
-uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case KC_LEFT_GUI:
-            return TAPPING_TERM + 60;
-        case KC_Z:
-            return TAPPING_TERM + 60;
-        case MT(MOD_LALT, KC_X):
-            return TAPPING_TERM + 60;
-        case MT(MOD_RSFT, KC_QUOTE):
-            return TAPPING_TERM + 60;
-        case MT(MOD_RCTL, KC_EQUAL):
-            return TAPPING_TERM + 60;
-        case LT(10,KC_BSPC):
-            return TAPPING_TERM + 60;
-        case LT(9,KC_SPACE):
-            return TAPPING_TERM + 60;
-        default:
-            return TAPPING_TERM;
-    }
-}
-
 extern rgb_config_t rgb_matrix_config;
 
 void keyboard_post_init_user(void) {
@@ -232,6 +211,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       return false;
   }
   return true;
+}
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LT(7,KC_ENTER):
+            return TAPPING_TERM_LONG;
+        case LT(8,KC_ESCAPE):
+            return TAPPING_TERM_LONG;
+        default:
+            return TAPPING_TERM;
+    }
 }
 
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
