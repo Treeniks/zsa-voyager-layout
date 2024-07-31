@@ -15,7 +15,12 @@
 #define COMBO_COUNT 6
 
 #define TAPPING_TERM_PER_KEY
-#define RGB_MATRIX_STARTUP_SPD 60
+
+#define RGB_MATRIX_DEFAULT_SPD 20
+#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_SOLID_COLOR
+// https://docs.qmk.fm/features/rgb_matrix#additional-configh-options
+// https://github.com/qmk/qmk_firmware/blob/master/quantum/color.h
+#define RGB_MATRIX_DEFAULT_HUE 180
 
 #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 
