@@ -22,7 +22,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                  LT(7,KC_ENTER), LT(8,KC_ESCAPE), /* */ LT(9,KC_BSPC), LT(10,KC_SPACE)
     ),
 
-    // Valorant (top_right+\+')
+    // Valorant (top_right \ ')
     [1] = LAYOUT_voyager(
             KC_ESCAPE,   KC_5, KC_1, KC_2, KC_3, KC_4, /* */ LALT(KC_TAB), KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, TO(0),
                  KC_M, KC_TAB, KC_Q, KC_W, KC_R, KC_T, /* */ KC_MINUS,     KC_7,           KC_8,           KC_9,           KC_SLASH,       KC_TRANSPARENT,
@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                        KC_SPACE, KC_X, /* */ KC_TRANSPARENT, KC_0
     ),
 
-    // Game (9+0+top_right)
+    // Game (9 0 top_right)
     [2] = LAYOUT_voyager(
         KC_TRANSPARENT, KC_5, KC_1, KC_2, KC_3, KC_4, /* */ KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
         KC_TRANSPARENT, KC_T, KC_Q, KC_W, KC_E, KC_R, /* */ KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                             KC_SPACE, KC_TRANSPARENT, /* */ KC_TRANSPARENT, KC_TRANSPARENT
     ),
 
-    // Anime (3+4+5)
+    // Anime (3 4 5)
     [3] = LAYOUT_voyager(
         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, /* */ KC_ESCAPE, KC_KP_1, KC_KP_2, KC_INSERT, KC_HOME,     KC_PAGE_UP,
         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,          KC_UP,       KC_COMMA,         KC_DOT, /* */ KC_COMMA,  KC_DOT,  KC_UP,   KC_DELETE, KC_END,      KC_PGDN,
@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                               KC_SPACE, KC_TRANSPARENT, /* */ KC_ENTER, KC_SPACE
     ),
 
-    // Fn over (unused)
+    // Fn over (e r t)
     [4] = LAYOUT_voyager(
         KC_TRANSPARENT,          KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5, /* */ KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,
         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, /* */ KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_F12,
@@ -122,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                         KC_TRANSPARENT, KC_TRANSPARENT, /* */ KC_TRANSPARENT, KC_TRANSPARENT
     ),
 
-    // Board (6+7+8)
+    // Board (6 7 8)
     [11] = LAYOUT_voyager(
                    RGB_TOG,    RGB_MODE_FORWARD,             RGB_SPD,            RGB_SPI,             RGB_VAD,        RGB_VAI, /* */ KC_TRANSPARENT,    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, QK_BOOT,
                    RGB_HUI,      KC_TRANSPARENT,   KC_AUDIO_VOL_DOWN,    KC_AUDIO_VOL_UP,       KC_AUDIO_MUTE,        RGB_SAI, /* */ KC_TRANSPARENT,    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
