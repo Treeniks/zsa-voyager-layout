@@ -12,10 +12,10 @@ enum custom_keycodes {
     MT_QUOT = RSFT_T(KC_QUOT),
     MT_EQL  = RCTL_T(KC_EQL),
 
-    LT_ENT  = LT(5, KC_ENT),
-    LT_ESC  = LT(6, KC_ESC),
-    LT_BSPC = LT(7, KC_BSPC),
-    LT_SPC  = LT(8, KC_SPC),
+    LT_ENT  = LT(4, KC_ENT),
+    LT_ESC  = LT(5, KC_ESC),
+    LT_BSPC = LT(6, KC_BSPC),
+    LT_SPC  = LT(7, KC_SPC),
 
     ALT_TAB = LALT(KC_TAB),
 
@@ -54,26 +54,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                             LT_ENT,  LT_ESC,  /* */ LT_BSPC, LT_SPC
     ),
 
-    // Valorant
+    // Game
     [1] = LAYOUT_voyager(
         KC_ESC,  KC_5,    KC_1,    KC_2,    KC_3,    KC_4,    /* */ ALT_TAB, _______, _______, _______, _______, TO(0),
-        KC_M,    KC_TAB,  KC_Q,    KC_W,    KC_R,    KC_T,    /* */ _______, _______, _______, _______, _______, _______,
-        KC_LSFT, KC_G,    KC_A,    KC_S,    KC_D,    KC_F,    /* */ _______, _______, _______, _______, _______, _______,
-        KC_LCTL, KC_V,    KC_Z,    KC_Y,    KC_C,    KC_B,    /* */ _______, _______, _______, _______, _______, _______,
-                                            KC_SPC,  KC_X,    /* */ _______, _______
-    ),
-
-    // Game
-    [2] = LAYOUT_voyager(
-        KC_ESC,  KC_5,    KC_1,    KC_2,    KC_3,    KC_4,    /* */ _______, _______, _______, _______, _______, _______,
-        _______, KC_T,    KC_Q,    KC_W,    KC_E,    KC_R,    /* */ _______, _______, _______, _______, _______, _______,
+        _______, KC_M,    KC_Q,    KC_W,    KC_R,    KC_T,    /* */ _______, _______, _______, _______, _______, _______,
         _______, KC_G,    KC_A,    KC_S,    KC_D,    KC_F,    /* */ _______, _______, _______, _______, _______, _______,
         _______, KC_B,    KC_Z,    KC_X,    KC_C,    KC_V,    /* */ _______, _______, _______, _______, _______, _______,
-                                            KC_SPC,  KC_ENT,  /* */ _______, _______
+                                            KC_SPC,  KC_E,    /* */ KC_BSPC, KC_ENT
     ),
 
     // Anime
-    [3] = LAYOUT_voyager(
+    [2] = LAYOUT_voyager(
         _______, _______, _______, _______, _______, _______, /* */ KC_ESC,  KC_P1,   KC_P2,   KC_INS,  KC_HOME, KC_PGUP,
         _______, _______, _______, KC_UP,   KC_COMM, KC_DOT,  /* */ KC_COMM, KC_DOT,  KC_UP,   KC_DEL,  KC_END,  KC_PGDN,
         KC_LSFT, KC_C,    KC_LEFT, KC_DOWN, KC_RGHT, KC_F,    /* */ KC_F,    KC_LEFT, KC_DOWN, KC_RGHT, KC_C,    KC_RSFT,
@@ -82,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     // Fn overlay
-    [4] = LAYOUT_voyager(
+    [3] = LAYOUT_voyager(
         _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   /* */ KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
         _______, _______, _______, _______, _______, _______, /* */ _______, _______, _______, _______, _______, KC_F12,
         _______, _______, _______, _______, _______, _______, /* */ _______, _______, _______, _______, _______, _______,
@@ -91,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     // Num
-    [5] = LAYOUT_voyager(
+    [4] = LAYOUT_voyager(
         _______, _______, _______, _______, _______, _______, /* */ _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, /* */ _______, KC_7,    KC_8,    KC_9,    KC_MINS, _______,
         _______, _______, _______, _______, _______, _______, /* */ _______, KC_4,    KC_5,    KC_6,    _______, _______,
@@ -100,7 +91,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     // Sym
-    [6] = LAYOUT_voyager(
+    [5] = LAYOUT_voyager(
         _______, _______, _______, _______, _______, _______, /* */ _______, _______, _______, _______, _______, _______,
         _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, /* */ KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_LBRC,
         _______, RALT_Q,  RALT_P,  RALT_Y,  RALT_S,  RALT_5,  /* */ KC_TILD, KC_GRV,  _______, KC_LCBR, KC_RCBR, KC_RBRC,
@@ -109,7 +100,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     // Nav
-    [7] = LAYOUT_voyager(
+    [6] = LAYOUT_voyager(
         _______, _______, _______, _______, _______, _______, /* */ _______, _______, _______, _______, _______, _______,
         ALT_TAB, NAV_1,   NAV_2,   NAV_3,   NAV_4,   NAV_5,   /* */ TAB_PRE, _______, _______, TAB_NEX, _______, KC_LCBR,
         _______, NAV_6,   NAV_7,   NAV_8,   NAV_9,   NAV_0,   /* */ KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, KC_RCBR,
@@ -118,7 +109,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     // Fn
-    [8] = LAYOUT_voyager(
+    [7] = LAYOUT_voyager(
         _______, _______, _______, _______, _______, _______, /* */ _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, /* */ KC_PSCR, KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______,
         _______, _______, _______, _______, _______, _______, /* */ KC_INS,  KC_F5,   KC_F6,   KC_F7,   KC_F8,   _______,
@@ -127,7 +118,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     // Board
-    [9] = LAYOUT_voyager(
+    [8] = LAYOUT_voyager(
         RGB_TOG, RGB_MOD, RGB_SPD, RGB_SPI, RGB_VAD, RGB_VAI, /* */ _______, _______, _______, _______, _______, QK_BOOT,
         RGB_HUI, _______, KC_VOLD, KC_VOLU, KC_MUTE, RGB_SAI, /* */ _______, _______, _______, _______, _______, _______,
         RGB_HUD, KC_MPRV, KC_MNXT, KC_MSTP, KC_MPLY, RGB_SAD, /* */ _______, _______, _______, _______, _______, _______,
@@ -138,8 +129,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // right side - top right - 3 towards bottom
 const uint16_t PROGMEM combo0[] = { KC_RALT, KC_BSLS, MT_QUOT, COMBO_END };
-// right side - top right - 3 towards left
-const uint16_t PROGMEM combo1[] = { KC_RALT, KC_0, KC_9, COMBO_END };
+// right side - top right - 3 towards left - not in use
+// const uint16_t PROGMEM combo1[] = { KC_RALT, KC_0, KC_9, COMBO_END };
 // left thumb keys
 const uint16_t PROGMEM combo2[] = { LT_ENT, LT_ESC, COMBO_END };
 // right side - top left - 3 towards right
@@ -150,8 +141,7 @@ const uint16_t PROGMEM combo4[] = { KC_5, KC_4, KC_3, COMBO_END };
 const uint16_t PROGMEM combo5[] = { KC_T, KC_R, KC_E, COMBO_END };
 
 combo_t key_combos[COMBO_COUNT] = {
-    COMBO(combo0, TO(1)), // Valorant
-    COMBO(combo1, TG(2)), // Game
+    COMBO(combo0, TO(1)), // Game
     COMBO(combo2, KC_DEL),
     COMBO(combo3, TG(9)), // Board
     COMBO(combo4, TG(3)), // Anime
@@ -165,23 +155,23 @@ void keyboard_post_init_user(void) {
 }
 
 const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
-    // Valorant
+    // Game
     [1] = {
         {0,0,0}, {0,0,0}, {0,0,0},       {0,0,0},       {0,0,0},       {0,0,0},
         {0,0,0}, {0,0,0}, {0,0,0},       {129,255,255}, {0,0,0},       {0,0,0},
         {0,0,0}, {0,0,0}, {129,255,255}, {129,255,255}, {129,255,255}, {0,0,0},
         {0,0,0}, {0,0,0}, {0,0,0},       {0,0,0},       {0,0,0},       {0,0,0},
-        {0,0,0}, {0,0,0},
+        {172,255,255}, {0,0,0},
         /* */
         {0,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,255,255},
         {0,0,0},     {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0},
         {0,0,0},     {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0},
         {0,0,0},     {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0},
-        {0,0,0}, {0,0,0}
+        {0,0,0}, {172,255,255}
     },
 
     // Anime
-    [3] = {
+    [2] = {
         {0,0,0},      {0,0,0},      {0,0,0},      {0,0,0},      {0,0,0},      {0,0,0},
         {0,0,0},      {0,0,0},      {0,0,0},      {0,0,80},     {129,255,80}, {129,255,80},
         {215,255,80}, {86,255,80},  {0,0,80},     {0,0,80},     {0,0,80},     {86,255,80},
@@ -196,7 +186,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     },
 
     // Fn overlay
-    [4] = {
+    [3] = {
         {0,0,255}, {129,255,255}, {129,255,255}, {129,255,255}, {129,255,255}, {129,255,255},
         {0,0,255}, {0,0,255},     {0,0,255},     {0,0,255},     {0,0,255},     {0,0,255},
         {0,0,255}, {0,0,255},     {0,0,255},     {0,0,255},     {0,0,255},     {0,0,255},
@@ -211,7 +201,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     },
 
     // Num
-    [5] = {
+    [4] = {
         {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0},     {0,0,0},
         {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0},     {0,0,0},
         {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0},     {0,0,0},
@@ -219,14 +209,14 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
         {0,0,0}, {0,0,0},
         /* */
         {0,0,0}, {0,0,0},       {0,0,0},       {0,0,0},       {0,0,0},       {0,0,0},
-        {0,0,0}, {129,255,255}, {129,255,255}, {129,255,255}, {172,255,255}, {172,255,255},
-        {0,0,0}, {129,255,255}, {129,255,255}, {129,255,255}, {172,255,255}, {215,255,255},
-        {0,0,0}, {129,255,255}, {129,255,255}, {129,255,255}, {172,255,255}, {172,255,255},
+        {0,0,0}, {129,255,255}, {129,255,255}, {129,255,255}, {172,255,255}, {0,0,0},
+        {0,0,0}, {129,255,255}, {129,255,255}, {129,255,255}, {0,0,0},       {0,0,0},
+        {0,0,0}, {129,255,255}, {129,255,255}, {129,255,255}, {0,0,0},       {0,0,0},
         {0,0,0}, {129,255,255}
     },
 
     // Sym
-    [6] = {
+    [5] = {
         {0,0,0}, {0,0,0},       {0,0,0},       {0,0,0},       {0,0,0},       {0,0,0},
         {0,0,0}, {129,255,255}, {129,255,255}, {129,255,255}, {129,255,255}, {129,255,255},
         {0,0,0}, {215,255,255}, {215,255,255}, {215,255,255}, {215,255,255}, {215,255,255},
@@ -241,7 +231,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     },
 
     // Nav
-    [7] = {
+    [6] = {
         {0,0,0},       {0,0,0},       {0,0,0},       {0,0,0},       {0,0,0},       {0,0,0},
         {215,255,255}, {215,255,255}, {215,255,255}, {215,255,255}, {215,255,255}, {215,255,255},
         {0,0,0},       {215,255,255}, {215,255,255}, {215,255,255}, {215,255,255}, {215,255,255},
@@ -256,7 +246,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     },
 
     // Fn
-    [8] = {
+    [7] = {
         {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0},     {0,0,0},
         {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0},     {0,0,0},
         {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0},     {0,0,0},
@@ -271,7 +261,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     },
 
     // Board
-    [9] = {
+    [8] = {
         {43,255,255}, {43,255,255},  {43,255,255},  {43,255,255},  {43,255,255},  {43,255,255},
         {43,255,255}, {0,0,0},       {172,255,255}, {172,255,255}, {172,255,255}, {43,255,255},
         {43,255,255}, {129,255,255}, {129,255,255}, {129,255,255}, {129,255,255}, {43,255,255},
@@ -311,13 +301,13 @@ bool rgb_matrix_indicators_user(void) {
     int layer = biton32(layer_state);
     switch (layer) {
         case 1:
+        case 2:
         case 3:
         case 4:
         case 5:
         case 6:
         case 7:
         case 8:
-        case 9:
             set_layer_color(layer);
             break;
         default:
