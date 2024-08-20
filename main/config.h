@@ -7,6 +7,9 @@
 #define TAPPING_TERM 180
 #define TAPPING_TERM_LONG 220
 
+#define TAPPING_TERM_PER_KEY
+#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
+
 #define USB_SUSPEND_WAKEUP_DELAY 0
 #define FIRMWARE_VERSION u8"EoZZD/nNoZK"
 #define RAW_USAGE_PAGE 0xFF60
@@ -14,15 +17,11 @@
 #define LAYER_STATE_16BIT
 #define COMBO_COUNT 6
 
-#define TAPPING_TERM_PER_KEY
-
 #define RGB_MATRIX_DEFAULT_SPD 20
 #define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_SOLID_COLOR
 // https://docs.qmk.fm/features/rgb_matrix#additional-configh-options
 // https://github.com/qmk/qmk_firmware/blob/master/quantum/color.h
 #define RGB_MATRIX_DEFAULT_HUE 180
-
-#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 
 #undef ENABLE_RGB_MATRIX_ALPHAS_MODS
 #undef ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN
