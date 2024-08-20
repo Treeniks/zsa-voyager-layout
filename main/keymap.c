@@ -143,9 +143,9 @@ const uint16_t PROGMEM combo5[] = { KC_T, KC_R, KC_E, COMBO_END };
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, TO(1)), // Game
     COMBO(combo2, KC_DEL),
-    COMBO(combo3, TG(9)), // Board
-    COMBO(combo4, TG(3)), // Anime
-    COMBO(combo5, TG(4)), // Fn overlay
+    COMBO(combo3, TG(8)), // Board
+    COMBO(combo4, TG(2)), // Anime
+    COMBO(combo5, TG(3)), // Fn overlay
 };
 
 extern rgb_config_t rgb_matrix_config;
